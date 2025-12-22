@@ -251,14 +251,12 @@ ui <- fluidPage(
       class = "topbar-inner",
       div(
         class = "brand",
+        tags$div(id = "logo_fallback", class = "logo-placeholder", style = "display:none;", "L"),
         uiOutput("logo_ui"),
         div(
           class = "brand-text",
           tags$div(class = "app-name", "CheckMySampleSize"),
-          tags$div(
-            class = "tagline",
-            HTML("Study design &nbsp;•&nbsp; Biostatistics &nbsp;•&nbsp; Practical power thinking")
-          )
+          tags$div(class = "tagline", HTML("Study design &nbsp;•&nbsp; Biostatistics &nbsp;•&nbsp; Practical power thinking"))
         )
       ),
       div(
@@ -529,19 +527,12 @@ server <- function(input, output, session) {
   })
   
   output$logo_ui <- renderUI({
-    logo_path_png <- file.path("www", "labinfos_logo.png")
-    logo_path_jpg <- file.path("www", "labinfos_logo.jpg")
-    logo_path_svg <- file.path("www", "labinfos_logo.svg")
-    
-    if (file.exists(logo_path_png)) {
-      tags$img(src = "labinfos_logo.png", class = "brand-logo", alt = "LabInfoS logo")
-    } else if (file.exists(logo_path_jpg)) {
-      tags$img(src = "labinfos_logo.jpg", class = "brand-logo", alt = "LabInfoS logo")
-    } else if (file.exists(logo_path_svg)) {
-      tags$img(src = "labinfos_logo.svg", class = "brand-logo", alt = "LabInfoS logo")
-    } else {
-      tags$div(class = "logo-placeholder", "L")
-    }
+    tags$img(
+      src = "LabInfoS_logo.png",
+      class = "brand-logo",
+      alt = "LabInfoS logo",
+      onerror = "this.onerror=null; this.style.display='none'; document.getElementById('logo_fallback').style.display='flex';"
+    )
   })
   
   output$chips_ui <- renderUI({

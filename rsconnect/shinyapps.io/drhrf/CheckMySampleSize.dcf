@@ -1,0 +1,12 @@
+name: CheckMySampleSize
+title: CheckMySampleSize
+username: drhrf
+account: drhrf
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16347039
+bundleId: 11357475
+url: https://drhrf.shinyapps.io/CheckMySampleSize/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
