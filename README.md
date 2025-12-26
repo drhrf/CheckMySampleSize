@@ -3,6 +3,10 @@
 
 <!-- badges: start -->
 
+[![Launch CheckMySampleSize](https://img.shields.io/badge/Launch-CheckMySampleSize-8A2BE2?style=for-the-badge&logo=r&logoColor=white)](https://drhrf.shinyapps.io/CheckMySampleSize/)
+
+</br>
+
 HTML: <a href="https://joss.theoj.org/papers/0aecea0a214a3b1f4b4169f5b197c586"><img src="https://joss.theoj.org/papers/0aecea0a214a3b1f4b4169f5b197c586/status.svg"></a>
 </br>
 Markdown: [![status](https://joss.theoj.org/papers/0aecea0a214a3b1f4b4169f5b197c586/status.svg)](https://joss.theoj.org/papers/0aecea0a214a3b1f4b4169f5b197c586)
